@@ -1,15 +1,20 @@
+#include <string.h>
+#include <unistd.h>
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+{
+	char *dd = dst;
+	const char *ss = src;
+	int c;
+
+	c =0;
+	while (n --)
+	{
+		dd[c] = ss[c];
+		c++;
+	}
+	return (dst);
+}
 char    *ft_strncpy(char *str1, char *str2, int n)
 {
-    int cont;
-
-    if (n > ft_strlen(str2))
-        return (NULL);
-    cont = 0;
-    while (str2[cont] <= n))
-    {
-        str1[cont] = str2[cont];
-        cont++;
-    }
-    str1[cont] = '\0';
-    return(str1);
+	return (ft_memcpy(str1, str2, n));
 }
