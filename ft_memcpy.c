@@ -13,11 +13,10 @@
 #include <string.h>
 void	*memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	int len;
-
-	len = 0;
-	while (len ++ <= n)
-		dst[len] = src[len];
+	char *dd = dst;
+	const char *ss = src;
+	while (n--)
+		*dd++ = *ss++;
 	return (dst);
 }
 
