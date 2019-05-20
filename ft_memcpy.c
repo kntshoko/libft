@@ -15,8 +15,15 @@ void	*memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
 	char *dd = dst;
 	const char *ss = src;
+	int c;
+	
+	c = 0;
 	while (n--)
-		*dd++ = *ss++;
+	{
+		
+		dd[c] = ss[c];
+		c++;
+	}
 	return (dst);
 }
 
