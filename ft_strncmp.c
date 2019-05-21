@@ -6,11 +6,13 @@
 /*   By: kntshoko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 08:39:14 by kntshoko          #+#    #+#             */
-/*   Updated: 2019/05/21 10:56:24 by kntshoko         ###   ########.fr       */
+/*   Updated: 2019/05/21 11:01:14 by kntshoko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strncmp(char *str1, char *str2, int n)
+#include <string.h>
+
+int ft_strncmp(const char *str1, const char *str2, size_t n)
 {
 	int c;
 
