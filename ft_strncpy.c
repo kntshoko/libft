@@ -6,12 +6,13 @@
 /*   By: kntshoko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 08:39:43 by kntshoko          #+#    #+#             */
-/*   Updated: 2019/05/21 08:39:55 by kntshoko         ###   ########.fr       */
+/*   Updated: 2019/05/21 14:15:28 by kntshoko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <unistd.h>
+
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
 	char *dd = dst;
