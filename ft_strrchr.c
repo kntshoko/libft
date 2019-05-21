@@ -6,20 +6,26 @@
 /*   By: kntshoko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 08:47:34 by kntshoko          #+#    #+#             */
-/*   Updated: 2019/05/21 08:48:01 by kntshoko         ###   ########.fr       */
+/*   Updated: 2019/05/21 18:08:36 by kntshoko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char    *(const char *str, int c)
-{
-    char *str2;
+#include <string.h>
+#include <stdlib.h>
 
-     if (str == c)
-        str2 = (char *)str;
-    while (str++)
+char    *ft_strrchr(const char *str, int c)
+{
+	int len;
+
+	len = strlen(str); 
+    if (str [ len] == c)
+        return(char *)str;
+    while (len != -2)
     {
-        if (str == c)
-        str2 = (char *)str;
-    }
-    return(str2);
+		len --;
+		if (len == -1)
+			return(NULL);
+   	}
+
+	return(char *)str;
 }
