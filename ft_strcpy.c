@@ -1,5 +1,15 @@
-#include <string.h>
-#include <unistd.h>
+#include <stri#include <stdlib.h>
+
+
+int ft_strlen(char *str)
+{
+    int cont;
+
+    cont = 0;
+    while (str[cont] != '\0')
+        cont++;
+    return(cont);
+}
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
 	char *dd = dst;
@@ -14,7 +24,8 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 	}
 	return (dst);
 }
-char    *ft_strncpy(char *str1, char *str2, int n)
+char    *ft_strcpy(char *str1, char *str2)
 {
-	return (ft_memcpy(str1, str2, n));
+	return (ft_memcpy(str1, str2, ft_strlen(str2)));
 }
+
