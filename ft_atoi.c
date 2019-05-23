@@ -1,14 +1,36 @@
-int ft_atoi(const char *str)
-{
-    int op;
-    int cont;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kntshoko <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/23 11:14:58 by kntshoko          #+#    #+#             */
+/*   Updated: 2019/05/23 11:16:17 by kntshoko         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    op = 0;
-    cont = 0;
-    while (str[cont] != '\0')
-    {
-        op = op *10 +str[cont] - '0';
-        cont ++;
-    }
-    return(op);
+
+int	ft_atoi(const char *str)
+{
+	int toi ;
+	int c;
+	int si;
+
+	c = 0;
+	toi = 0;
+	si = 1;
+	while ((str[c] == ' ') ||(8 < str[c] && str[c] < 14))
+	   c++;
+	if(str[c] == '-')
+	{
+		si =si - 2;
+		c++;
+	}
+	while (isdigit(str[c]) == 1)
+		{
+			toi = toi * 10 +str[c] - 48;
+			c++;
+		}
+	return (toi * si);
 }
