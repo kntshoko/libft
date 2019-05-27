@@ -13,7 +13,8 @@
 void	*ft_memdel(void **ap)
 {
 	if (ap != NULL)
-		free(ap);
+		while (ap++)
+			free(ap);
 	ap = NULL;
 	return (0);
 }
