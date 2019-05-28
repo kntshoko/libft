@@ -14,21 +14,18 @@ char	*ft_strstr(const char *haystack, const char *needle)
 {
 	int in;
 	int ih;
-	char *hy = (char *)haystack;
+	char *hy;
 	char *tocmp;
-
+	
+	hy = (char *)haystack;
 	in = 0;
 	ih = 0;
-
 	if (strlen(needle) == 0)
 		return((char *)&haystack[ih]);
 	while (hy[ih] != '\0')
 	{
-		while (in < strlen(needle))
-		{
-			tocmp[in] = hy[ih + in];
-			in++;
-		}
+		while (in++ <= strlen(needle))
+			tocmp[in - 1] = hy[ih + (in - 1)];
 		if (strcmp(tocmp,needle) == 0)
 			return((char *)&haystack[ih]);
 		in = 0;
